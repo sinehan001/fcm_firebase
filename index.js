@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const fs = require('firebase-admin');
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
 const cors = require("cors");
 require("dotenv").config();
 const { type } = JSON.parse(process.env.type);
